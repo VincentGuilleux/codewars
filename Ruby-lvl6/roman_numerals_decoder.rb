@@ -40,17 +40,17 @@ pp solution('MCMXC')
 # pp solution('I')
 
 # BEST SOLUTION UNDERSTOOD
-# def solution(roman)
-#   mapping = {
-#     'M' => 1000,
-#     'D' => 500,
-#     'C' => 100,
-#     'L' => 50,
-#     'X' => 10,
-#     'V' => 5,
-#     'I' => 1,
-#   }
+def solution(roman)
+  mapping = {
+    'M' => 1000,
+    'D' => 500,
+    'C' => 100,
+    'L' => 50,
+    'X' => 10,
+    'V' => 5,
+    'I' => 1,
+  }
 
-#   digits = roman.scan(/.{1}/).reverse.map{|d| mapping[d]}
-#   digits.map.with_index {|d, i| digits[i.zero? ? i : i - 1] > d ? -d : d}.inject(:+)
-# end
+  digits = roman.scan(/.{1}/).reverse.map{|d| mapping[d]}
+  digits.map.with_index {|d, i| digits[i.zero? ? i : i - 1] > d ? -d : d}.inject(:+)
+end
